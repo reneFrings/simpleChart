@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Chart</title>
+        <meta name="description" content="Create and save a simple line chart. Add, edit, remove key figures.">
+        <meta name="robots" content="noindex,follow,noydir">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">      
+
+    </head>
+    <body>
+        <main>
+            <div id="chart_box">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div>
+                <button type="button" id="make_screenshot" title=""><img src="img/download-to-storage-drive.svg" alt=""></button>
+            </div>
+            <h2>Chart Daten</h2>
+            <form id="chart_title_box">
+                <label for="chart_title">Chart Titel</label>
+                <input type="text" id="chart_title" name="chart_title" title="Titel für das Charts eintragen">
+                <button type="button" id="save_chart_title" title="Chart Titel speichern"><img src="img/save-file-option.svg" alt=""></button>
+            </form>
+            <section>
+                <form id="form_data_1">
+                    <div class="key_figure_box"><span>Kennzahl #1</span></div>
+                    <ul class="data">
+                        <li class="key_figure_title_box">
+                            <label for="key_figure_title">Titel</label>
+                            <input type="text" class="key_figure_title" name="key_figure_title" title="Bezeichnung der Kennzahl" value="Kennzahl #1">
+                        </li>
+                        <li class="k1">
+                            <label for="q1">Q1</label>
+                            <input class="dimension" type="text" name="q1" title="Wert für Q1 eintragen">
+                        </li>
+                        <li class="k2">
+                            <label for="q2">Q2</label>
+                            <input class="dimension" type="text" name="q2" title="Wert für Q2 eintragen">
+                        </li>
+                        <li class="k3">
+                            <label for="q3">Q3</label>
+                            <input class="dimension" type="text" name="q3" title="Wert für Q3 eintragen">
+                        </li>
+                        <li class="k4">
+                            <label for="q4">Q4</label>
+                            <input class="dimension" type="text" name="q4" title="Wert für Q4 eintragen">
+                        </li>
+                        <li class="button_group">
+                            <button type="button" class="add_data_button" title="Werte für Kennzahl ins Chart einfügen">
+                                <img src="img/save-file-option.svg" alt="Werte für Kennzahl ins Chart einfügen">
+                            </button>
+                            <button type="reset" class="del_data_button" title="Alle Werte für diese Kennzahl löschen">
+                                <img src="img/trash.svg" alt="Alle Werte für diese Kennzahl löschen">
+                            </button>
+                        </li>
+                    </ul>
+                </form>        
+                <button type="button" id="add_form" title="Weitere Kennzahl hinzufügen">
+                    <img src="img/plus-black-symbol.svg" alt="Weitere Kennzahl hinzufügen">
+                </button>
+            </section>
+        </main>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/html2canvas.min.js"></script>
+
+    </body>
+</html>
